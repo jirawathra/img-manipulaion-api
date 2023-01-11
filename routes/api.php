@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 // Route::apiResource('album', AlbumController::class);
 
 
+// auth sanctum start here
 Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('V1')->group(function () {
         Route::apiResource('album', AlbumController::class);
