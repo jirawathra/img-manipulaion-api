@@ -10,6 +10,7 @@ class CustomerController extends Controller
     //
     public function index()
     {
-        return "in customer controller";
+        // return "in customer controller";
+        return "in customer controller from remote repo";
     }
 }
