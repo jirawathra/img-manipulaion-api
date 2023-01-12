@@ -26,7 +26,9 @@ class ImageManipulationController extends Controller
         // ImageManipulationResource::collection(ImageManipulation::all());
         //display all image with pagination
         // return ImageManipulationResource::collection(ImageManipulation::paginate());
-        return ImageManipulationResource::collection(ImageManipulation::where('user_id', $request->user()->id)->paginate());
+        // return ImageManipulationResource::collection(ImageManipulation::where('user_id', $request->user()->id)->paginate());
+        // define paginate with value 3 
+        return ImageManipulationResource::collection(ImageManipulation::where('user_id', $request->user()->id)->paginate(3));
     }
 
     public function byAlbum(Request $request, Album $album)
